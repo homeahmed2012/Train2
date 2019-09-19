@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Train2.Base.BRole>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="container">
+        <p>
+            @Html.ActionLink("Create New", "AddRole", null, new { @class = "btn btn-primary", style = "margin-top: 10px" })
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RoleId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr id="@item.RoleId">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RoleId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td class="text-right">
+                        @Html.ActionLink("Edit", "EditRole", new { id = item.RoleId }) |
+                        @Html.ActionLink("Details", "GetRole", new { id = item.RoleId }) |
+                        <button class="btn btn-danger" onclick="deleteRole(@item.RoleId)">Delete</button>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script>
+        function deleteRole(RoleId) {
+            $.ajax('http://localhost:63463/api/role/' + RoleId,
+                {
+                    method: "DELETE",
+                    success: function (result) {
+                        $('#' + RoleId).remove()
+                    },
+                    error: function (error) {
+                        // to be handled properly
+                        alert(erro);
+                    }
+                });
+        }
+    </script>
+</body>
+</html>

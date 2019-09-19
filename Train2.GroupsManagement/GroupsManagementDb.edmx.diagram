@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="be256c32b1f2474b883a4e2b166115a3" Name="Diagram1">
+        <EntityTypeShape EntityType="GroupsManagementDbModel.Group" Width="1.5" PointX="3.625" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GroupsManagementDbModel.sysdiagram" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GroupsManagementDbModel.User" Width="1.5" PointX="3.625" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="GroupsManagementDbModel.FK_User_Groups" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GroupsManagementDbModel.GroupsRole" Width="1.5" PointX="6.75" PointY="3.875" />
+        <EntityTypeShape EntityType="GroupsManagementDbModel.Role" Width="1.5" PointX="9.875" PointY="4.25" />
+        <AssociationConnector Association="GroupsManagementDbModel.FK_GroupsRoles_Groups" />
+        <AssociationConnector Association="GroupsManagementDbModel.FK_GroupsRoles_Roles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

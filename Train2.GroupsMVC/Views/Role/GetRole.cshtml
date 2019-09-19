@@ -1,0 +1,45 @@
+﻿@model Train2.Base.BRole
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetRole</title>
+    @Styles.Render("~/Content/css");
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h4>BRole</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.RoleId)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RoleId)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "EditRole", new { id = Model.RoleId }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</body>
+</html>

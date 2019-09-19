@@ -1,0 +1,45 @@
+﻿@model Train2.Base.BGroup
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetGroup</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h4>BGroup</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.GroupId)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.GroupId)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</body>
+</html>

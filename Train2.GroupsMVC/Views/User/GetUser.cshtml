@@ -1,0 +1,61 @@
+﻿@model Train2.Base.BUser
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetUser</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h4>BUser</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.UserId)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UserId)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.GroupName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.GroupName)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "EditUser", new { id = Model.UserId }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</body>
+</html>

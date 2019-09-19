@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>404 Not Found</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet">
+
+    <!-- Custom stlylesheet -->
+    @Styles.Render("~/Content/NotFoundStyles.css")
+</head>
+<body>
+    <div id="notfound">
+        <div class="notfound">
+            <div class="notfound-404">
+                <h1>Oops!</h1>
+                <h2>404 - The Page can't be found</h2>
+            </div>
+            @Html.ActionLink("Go TO Homepage", "Index", "User")
+        </div>
+    </div>
+</body>
+</html>
